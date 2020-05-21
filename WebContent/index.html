@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<form action='charge' method='POST' id='checkout-form' xmlns:th="http://www.w3.org/1999/xhtml">
+    <input type='hidden' value='10' name='amount' />
+    <input type='text' value='pk_test_hg6egUHgulhUSON9P4WUfA9S000bJmOi0o' name='pk' />
+    <h1>Price:10</h1>
+   
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      Stripe.setPublishableKey('pk_test_hg6egUHgulhUSON9P4WUfA9S000bJmOi0o');
+      data-key="pk_test_hg6egUHgulhUSON9P4WUfA9S000bJmOi0o"
+      data-description="A month's subscription"
+      data-currency="INR"
+      data-amount="100.00"
+      data-locale="auto">
+</script>
+</form>
+</body>
+</html>
